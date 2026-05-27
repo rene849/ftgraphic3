@@ -251,22 +251,36 @@ body.ready {
 
 </div>
 
-<!-- End ai2html - 2026-05-18 10:11 -->
-
-    <script src="https://cdn.economistdatateam.com/ai2html/ai2html-resizer-v7-econ.js"></script>
 <script>
 (function() {
   var lastHeight = 0;
   var stableCount = 0;
 
+  function showCorrectArtboard() {
+    var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
+    var mobileBoard = document.getElementById('g-ECONED_3-Artboard_1');
+    var isDesktop = window.innerWidth >= 700;
+
+    // Manually switch artboards instead of relying on ai2html resizer
+    if (isDesktop) {
+      desktopBoard.style.display = 'block';
+      mobileBoard.style.display = 'none';
+    } else {
+      desktopBoard.style.display = 'none';
+      mobileBoard.style.display = 'block';
+    }
+  }
+
   function scaleAndSend() {
+    showCorrectArtboard();
+
     var box = document.getElementById('g-index-box');
     var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
     var mobileBoard = document.getElementById('g-ECONED_3-Artboard_1');
+    var isDesktop = window.innerWidth >= 700;
     var reportHeight;
 
-    if (desktopBoard && desktopBoard.getBoundingClientRect().height > 0) {
-      // Desktop — scale to fit container
+    if (isDesktop) {
       var containerWidth = box.offsetWidth;
       var nativeWidth = 700;
       var nativeHeight = 229.27;
@@ -277,9 +291,7 @@ body.ready {
       desktopBoard.style.marginBottom = (scaledHeight - nativeHeight) + 'px';
       box.style.height = scaledHeight + 'px';
       reportHeight = scaledHeight;
-
-    } else if (mobileBoard && mobileBoard.getBoundingClientRect().height > 0) {
-      // Mobile — use exact measured height
+    } else {
       var nativeMobileHeight = 500;
       box.style.height = nativeMobileHeight + 'px';
       reportHeight = nativeMobileHeight;
@@ -287,7 +299,6 @@ body.ready {
 
     if (!reportHeight) return;
 
-    // Show content now sizing is correct
     document.body.classList.add('ready');
 
     var currentHeight = Math.round(reportHeight);
@@ -312,7 +323,7 @@ body.ready {
       retryCount++;
       if (retryCount >= 10) clearInterval(retryInterval);
     }, 300);
-  }, 800);
+  }, 100); // Reduced to 100ms since we no longer need to wait for external resizer
 
 })();
 </script>
