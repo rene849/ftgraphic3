@@ -256,7 +256,9 @@
   function scaleAndSend() {
     var box = document.getElementById('g-index-box');
     var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
-    
+    var mobileBoard = document.getElementById('g-ECONED_3-Artboard_1');
+    var reportHeight;
+
     if (desktopBoard && desktopBoard.offsetParent !== null) {
       // Desktop artboard is visible — scale it to fit
       var containerWidth = box.offsetWidth;
@@ -264,12 +266,19 @@
       var scale = Math.min(1, containerWidth / nativeWidth);
       desktopBoard.style.transform = 'scale(' + scale + ')';
       desktopBoard.style.transformOrigin = 'top left';
-      // Adjust container height to match scaled height
-      var scaledHeight = desktopBoard.offsetHeight * scale;
+      var scaledHeight = 229.27 * scale;
+      desktopBoard.style.marginBottom = (scaledHeight - 229.27) + 'px';
       box.style.height = scaledHeight + 'px';
+      reportHeight = scaledHeight;
+    } else if (mobileBoard && mobileBoard.offsetParent !== null) {
+      // Mobile artboard is visible
+      reportHeight = mobileBoard.offsetHeight;
+      box.style.height = reportHeight + 'px';
     }
 
-    var currentHeight = document.body.scrollHeight;
+    if (!reportHeight) return;
+
+    var currentHeight = Math.round(reportHeight);
     if (currentHeight === lastHeight) {
       stableCount++;
       if (stableCount >= 3) return;
@@ -279,7 +288,7 @@
     }
     window.parent.postMessage({
       type: 'iframe-height',
-      height: currentHeight
+      height: currentHeight + 16
     }, '*');
   }
 
