@@ -2,266 +2,121 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link
-      rel="stylesheet"
-      href="https://cdn.economistdatateam.com/ai2html/fonts.css"
-    />
+    <link rel="stylesheet" href="https://cdn.economistdatateam.com/ai2html/fonts.css" />
     <style>
+      [id*="numerals-tabular"] { font-variant-numeric: tabular-nums !important; }
+      [id*="numerals-osf"] { font-variant-numeric: oldstyle-nums !important; }
 
-      [id*="numerals-tabular"] {
-        font-variant-numeric: tabular-nums !important;
+      #g-index-box, #g-index-box .g-artboard { margin: 0 auto; }
+      #g-index-box p { margin: 0; }
+      #g-index-box .g-aiAbs { position: absolute; }
+      #g-index-box .g-aiImg { position: absolute; top: 0; display: block; width: 100% !important; }
+      #g-index-box .g-aiSymbol { position: absolute; box-sizing: border-box; }
+      #g-index-box .g-aiPointText p { white-space: nowrap; }
+
+      #g-ECONED_3-Artboard_1 { position: relative; overflow: hidden; }
+      #g-ECONED_3-Artboard_1 p {
+        font-family: var(--ds-type-system-sans-lining);
+        font-weight: 600; line-height: 20px; height: auto; opacity: 1;
+        letter-spacing: 0em; font-size: 17px; text-align: left;
+        color: rgb(227,18,11); text-transform: none;
+        padding-bottom: 0; padding-top: 0; mix-blend-mode: normal;
+        font-style: normal; position: static;
       }
+      #g-ECONED_3-Artboard_1 .g-pstyle0 { font-weight: 500; line-height: 24px; height: 24px; font-size: 20px; text-align: center; color: rgb(0,0,0); }
+      #g-ECONED_3-Artboard_1 .g-pstyle1 { height: 20px; text-align: right; }
+      #g-ECONED_3-Artboard_1 .g-pstyle2 { height: 20px; }
+      #g-ECONED_3-Artboard_1 .g-pstyle3 { height: 20px; text-align: center; }
 
-      [id*="numerals-osf"] {
-        font-variant-numeric: oldstyle-nums !important;
+      #g-ECONED_3-Artboard_1_copy { position: relative; overflow: hidden; }
+      #g-ECONED_3-Artboard_1_copy p {
+        font-family: var(--ds-type-system-sans-lining);
+        font-weight: 600; line-height: 20px; height: auto; opacity: 1;
+        letter-spacing: 0em; font-size: 17px; text-align: left;
+        color: rgb(227,18,11); text-transform: none;
+        padding-bottom: 0; padding-top: 0; mix-blend-mode: normal;
+        font-style: normal; position: static;
       }
+      #g-ECONED_3-Artboard_1_copy .g-pstyle0 { font-weight: 500; line-height: 24px; height: 24px; font-size: 20px; text-align: center; color: rgb(0,0,0); }
+      #g-ECONED_3-Artboard_1_copy .g-pstyle1 { height: 20px; text-align: center; }
+      #g-ECONED_3-Artboard_1_copy .g-pstyle2 { height: 20px; }
+      #g-ECONED_3-Artboard_1_copy .g-pstyle3 { height: 20px; text-align: right; }
 
-      
-	#g-index-box ,
-	#g-index-box .g-artboard {
-		margin:0 auto;
-	}
-	#g-index-box p {
-		margin:0;
-	}
-	#g-index-box .g-aiAbs {
-		position:absolute;
-	}
-	#g-index-box .g-aiImg {
-		position:absolute;
-		top:0;
-		display:block;
-		width:100% !important;
-	}
-	#g-index-box .g-aiSymbol {
-		position: absolute;
-		box-sizing: border-box;
-	}
-	#g-index-box .g-aiPointText p { white-space: nowrap; }
-	#g-ECONED_3-Artboard_1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-ECONED_3-Artboard_1 p {
-		font-family:var(--ds-type-system-sans-lining);
-		font-weight:600;
-		line-height:20px;
-		height:auto;
-		opacity:1;
-		letter-spacing:0em;
-		font-size:17px;
-		text-align:left;
-		color:rgb(227,18,11);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
-	}
-	#g-ECONED_3-Artboard_1 .g-pstyle0 {
-		font-weight:500;
-		line-height:24px;
-		height:24px;
-		font-size:20px;
-		text-align:center;
-		color:rgb(0,0,0);
-	}
-	#g-ECONED_3-Artboard_1 .g-pstyle1 {
-		height:20px;
-		text-align:right;
-	}
-	#g-ECONED_3-Artboard_1 .g-pstyle2 {
-		height:20px;
-	}
-	#g-ECONED_3-Artboard_1 .g-pstyle3 {
-		height:20px;
-		text-align:center;
-	}
-	#g-ECONED_3-Artboard_1_copy {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-ECONED_3-Artboard_1_copy p {
-		font-family:var(--ds-type-system-sans-lining);
-		font-weight:600;
-		line-height:20px;
-		height:auto;
-		opacity:1;
-		letter-spacing:0em;
-		font-size:17px;
-		text-align:left;
-		color:rgb(227,18,11);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
-	}
-	#g-ECONED_3-Artboard_1_copy .g-pstyle0 {
-		font-weight:500;
-		line-height:24px;
-		height:24px;
-		font-size:20px;
-		text-align:center;
-		color:rgb(0,0,0);
-	}
-	#g-ECONED_3-Artboard_1_copy .g-pstyle1 {
-		height:20px;
-		text-align:center;
-	}
-	#g-ECONED_3-Artboard_1_copy .g-pstyle2 {
-		height:20px;
-	}
-	#g-ECONED_3-Artboard_1_copy .g-pstyle3 {
-		height:20px;
-		text-align:right;
-	}
+      /* REMOVED: [data-min-width] media queries — JS handles switching instead */
 
-[data-min-width] { display: none; } @media screen and (min-width: 0px) and (max-width: 699px) { [data-min-width="0"  ] { display: block } }
+      body { margin: 0; }
 
-  @media screen and (min-width: 700px)  { [data-min-width="700"  ] { display: block } }
+      /* Both artboards hidden by default — JS shows the correct one */
+      #g-ECONED_3-Artboard_1,
+      #g-ECONED_3-Artboard_1_copy { display: none; }
 
-   
-      
-      body {
-	  		margin: 0;
-      }
+      #g-index-box { width: 100%; overflow: hidden; }
 
-		body {
-        margin: 0;
-      }
-
-      /* Scale desktop artboard to fit container without breaking internal layout */
-      #g-index-box {
-        width: 100%;
-        overflow: hidden;
-      }
-      #g-ECONED_3-Artboard_1_copy {
-        transform-origin: top left;
-        transform: scale(1);
-      }
-/* Hide content until sized correctly */
-body {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-body.ready {
-  opacity: 1;
-}
+      /* Hide until sized correctly — prevents flash */
+      body { opacity: 0; transition: opacity 0.3s ease; }
+      body.ready { opacity: 1; }
     </style>
   </head>
- 
   <body>
-    
+
 <!-- Generated by ai2html v0.120.0 - 2026-05-18 10:11 -->
 <!-- ai file: ECONED_3.ai -->
 
-
 <div id="g-index-box" class="ai2html">
 
-	<!-- Artboard: Artboard_1 -->
-	<div id="g-ECONED_3-Artboard_1" class="g-artboard" style="max-width: 360px;max-height: 500px" data-aspect-ratio="0.72" data-min-width="0" data-max-width="699">
-<div style="padding: 0 0 138.8889% 0;"></div>
-		<img id="g-ECONED_3-Artboard_1-img" class="g-ECONED_3-Artboard_1-img g-aiImg" alt="" src="ECONED_3-Artboard_1.png"/>
-		<div id="g-ai0-1" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:7.162%;margin-top:-13.8px;left:49.099%;margin-left:-70.5px;width:141px;">
-			<p class="g-pstyle0">Global security</p>
-		</div>
-		<div id="g-ai0-2" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:15.9545%;margin-top:-21.8px;right:71.2861%;width:88px;">
-			<p class="g-pstyle1">Closed</p>
-			<p class="g-pstyle1">countries</p>
-		</div>
-		<div id="g-ai0-3" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:15.9545%;margin-top:-21.8px;left:69.1067%;width:88px;">
-			<p class="g-pstyle2">Open</p>
-			<p class="g-pstyle2">countries</p>
-		</div>
-		<div id="g-ai0-4" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:28.3545%;margin-top:-21.8px;left:78.944%;margin-left:-45.5px;width:91px;">
-			<p class="g-pstyle3">Abundant</p>
-			<p class="g-pstyle3">resources</p>
-		</div>
-		<div id="g-ai0-5" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:28.3545%;margin-top:-21.8px;right:71.3265%;width:91px;">
-			<p class="g-pstyle1">Scarce</p>
-			<p class="g-pstyle1">resources</p>
-		</div>
-		<div id="g-ai0-6" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:45.162%;margin-top:-13.8px;left:49.0743%;margin-left:-102.5px;width:205px;">
-			<p class="g-pstyle0">Technological progress</p>
-		</div>
-		<div id="g-ai0-7" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:54.1546%;margin-top:-21.8px;left:30.7069%;margin-left:-48.5px;width:97px;">
-			<p class="g-pstyle3">Rapid</p>
-			<p class="g-pstyle3">innovation </p>
-		</div>
-		<div id="g-ai0-8" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:54.1545%;margin-top:-21.8px;left:67.6961%;margin-left:-56px;width:112px;">
-			<p class="g-pstyle3">Unregulated</p>
-			<p class="g-pstyle3">development</p>
-		</div>
-		<div id="g-ai0-9" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:91.3546%;margin-top:-21.8px;left:30.7578%;margin-left:-47px;width:94px;">
-			<p class="g-pstyle3">Slow</p>
-			<p class="g-pstyle3">innovation</p>
-		</div>
-		<div id="g-ai0-10" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:91.3545%;margin-top:-21.8px;left:67.6964%;margin-left:-56px;width:112px;">
-			<p class="g-pstyle3">Regulated</p>
-			<p class="g-pstyle3">development</p>
-		</div>
-	</div>
+  <!-- Artboard: Artboard_1 (mobile: 0-699px) -->
+  <div id="g-ECONED_3-Artboard_1" class="g-artboard" style="max-width:360px;max-height:500px" data-aspect-ratio="0.72" data-min-width="0" data-max-width="699">
+    <div style="padding: 0 0 138.8889% 0;"></div>
+    <img id="g-ECONED_3-Artboard_1-img" class="g-ECONED_3-Artboard_1-img g-aiImg" alt="" src="ECONED_3-Artboard_1.png"/>
+    <div id="g-ai0-1" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:7.162%;margin-top:-13.8px;left:49.099%;margin-left:-70.5px;width:141px;"><p class="g-pstyle0">Global security</p></div>
+    <div id="g-ai0-2" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:15.9545%;margin-top:-21.8px;right:71.2861%;width:88px;"><p class="g-pstyle1">Closed</p><p class="g-pstyle1">countries</p></div>
+    <div id="g-ai0-3" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:15.9545%;margin-top:-21.8px;left:69.1067%;width:88px;"><p class="g-pstyle2">Open</p><p class="g-pstyle2">countries</p></div>
+    <div id="g-ai0-4" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:28.3545%;margin-top:-21.8px;left:78.944%;margin-left:-45.5px;width:91px;"><p class="g-pstyle3">Abundant</p><p class="g-pstyle3">resources</p></div>
+    <div id="g-ai0-5" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:28.3545%;margin-top:-21.8px;right:71.3265%;width:91px;"><p class="g-pstyle1">Scarce</p><p class="g-pstyle1">resources</p></div>
+    <div id="g-ai0-6" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:45.162%;margin-top:-13.8px;left:49.0743%;margin-left:-102.5px;width:205px;"><p class="g-pstyle0">Technological progress</p></div>
+    <div id="g-ai0-7" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:54.1546%;margin-top:-21.8px;left:30.7069%;margin-left:-48.5px;width:97px;"><p class="g-pstyle3">Rapid</p><p class="g-pstyle3">innovation </p></div>
+    <div id="g-ai0-8" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:54.1545%;margin-top:-21.8px;left:67.6961%;margin-left:-56px;width:112px;"><p class="g-pstyle3">Unregulated</p><p class="g-pstyle3">development</p></div>
+    <div id="g-ai0-9" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:91.3546%;margin-top:-21.8px;left:30.7578%;margin-left:-47px;width:94px;"><p class="g-pstyle3">Slow</p><p class="g-pstyle3">innovation</p></div>
+    <div id="g-ai0-10" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:91.3545%;margin-top:-21.8px;left:67.6964%;margin-left:-56px;width:112px;"><p class="g-pstyle3">Regulated</p><p class="g-pstyle3">development</p></div>
+  </div>
 
-	<!-- Artboard: Artboard_1_copy -->
-	<div id="g-ECONED_3-Artboard_1_copy" class="g-artboard" style="width:700px; height:229.269621764939px;" data-aspect-ratio="3.053" data-min-width="700">
-<div style=""></div>
-		<img id="g-ECONED_3-Artboard_1_copy-img" class="g-ECONED_3-Artboard_1_copy-img g-aiImg" alt="" src="ECONED_3-Artboard_1_copy.png"/>
-		<div id="g-ai1-1" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:10.8212%;margin-top:-13.8px;left:74.5357%;margin-left:-102.5px;width:205px;">
-			<p class="g-pstyle0">Technological progress</p>
-		</div>
-		<div id="g-ai1-2" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:10.8194%;margin-top:-13.8px;left:24.886%;margin-left:-70.5px;width:141px;">
-			<p class="g-pstyle0">Global security</p>
-		</div>
-		<div id="g-ai1-3" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4327%;margin-top:-21.8px;left:62.7988%;margin-left:-48.5px;width:97px;">
-			<p class="g-pstyle1">Rapid</p>
-			<p class="g-pstyle1">innovation </p>
-		</div>
-		<div id="g-ai1-4" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;left:86.1081%;margin-left:-56px;width:112px;">
-			<p class="g-pstyle1">Unregulated</p>
-			<p class="g-pstyle1">development</p>
-		</div>
-		<div id="g-ai1-5" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;left:33.5709%;width:88px;">
-			<p class="g-pstyle2">Open</p>
-			<p class="g-pstyle2">countries</p>
-		</div>
-		<div id="g-ai1-6" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;right:83.6643%;width:88px;">
-			<p class="g-pstyle3">Closed</p>
-			<p class="g-pstyle3">countries</p>
-		</div>
-		<div id="g-ai1-7" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3898%;margin-top:-21.8px;left:62.8251%;margin-left:-47px;width:94px;">
-			<p class="g-pstyle1">Slow</p>
-			<p class="g-pstyle1">innovation</p>
-		</div>
-		<div id="g-ai1-8" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;left:86.1081%;margin-left:-56px;width:112px;">
-			<p class="g-pstyle1">Regulated</p>
-			<p class="g-pstyle1">development</p>
-		</div>
-		<div id="g-ai1-9" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;right:83.6851%;width:91px;">
-			<p class="g-pstyle3">Scarce</p>
-			<p class="g-pstyle3">resources</p>
-		</div>
-		<div id="g-ai1-10" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;left:38.1811%;margin-left:-45.5px;width:91px;">
-			<p class="g-pstyle1">Abundant</p>
-			<p class="g-pstyle1">resources</p>
-		</div>
-	</div>
+  <!-- Artboard: Artboard_1_copy (desktop: 700px+) -->
+  <div id="g-ECONED_3-Artboard_1_copy" class="g-artboard" style="width:700px;height:229.269621764939px;" data-aspect-ratio="3.053" data-min-width="700">
+    <div style=""></div>
+    <img id="g-ECONED_3-Artboard_1_copy-img" class="g-ECONED_3-Artboard_1_copy-img g-aiImg" alt="" src="ECONED_3-Artboard_1_copy.png"/>
+    <div id="g-ai1-1" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:10.8212%;margin-top:-13.8px;left:74.5357%;margin-left:-102.5px;width:205px;"><p class="g-pstyle0">Technological progress</p></div>
+    <div id="g-ai1-2" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:10.8194%;margin-top:-13.8px;left:24.886%;margin-left:-70.5px;width:141px;"><p class="g-pstyle0">Global security</p></div>
+    <div id="g-ai1-3" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4327%;margin-top:-21.8px;left:62.7988%;margin-left:-48.5px;width:97px;"><p class="g-pstyle1">Rapid</p><p class="g-pstyle1">innovation </p></div>
+    <div id="g-ai1-4" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;left:86.1081%;margin-left:-56px;width:112px;"><p class="g-pstyle1">Unregulated</p><p class="g-pstyle1">development</p></div>
+    <div id="g-ai1-5" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;left:33.5709%;width:88px;"><p class="g-pstyle2">Open</p><p class="g-pstyle2">countries</p></div>
+    <div id="g-ai1-6" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:30.4325%;margin-top:-21.8px;right:83.6643%;width:88px;"><p class="g-pstyle3">Closed</p><p class="g-pstyle3">countries</p></div>
+    <div id="g-ai1-7" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3898%;margin-top:-21.8px;left:62.8251%;margin-left:-47px;width:94px;"><p class="g-pstyle1">Slow</p><p class="g-pstyle1">innovation</p></div>
+    <div id="g-ai1-8" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;left:86.1081%;margin-left:-56px;width:112px;"><p class="g-pstyle1">Regulated</p><p class="g-pstyle1">development</p></div>
+    <div id="g-ai1-9" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;right:83.6851%;width:91px;"><p class="g-pstyle3">Scarce</p><p class="g-pstyle3">resources</p></div>
+    <div id="g-ai1-10" class="g-Layer_3 g-aiAbs g-aiPointText" style="top:85.3896%;margin-top:-21.8px;left:38.1811%;margin-left:-45.5px;width:91px;"><p class="g-pstyle1">Abundant</p><p class="g-pstyle1">resources</p></div>
+  </div>
 
 </div>
+<!-- End ai2html - 2026-05-18 10:11 -->
 
 <script>
 (function() {
   var lastHeight = 0;
   var stableCount = 0;
 
+  // Use iframe container width, not window.innerWidth
+  // since Moodle content area is narrower than the window
+  function getContainerWidth() {
+    var box = document.getElementById('g-index-box');
+    return box ? box.offsetWidth : window.innerWidth;
+  }
+
   function showCorrectArtboard() {
     var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
     var mobileBoard = document.getElementById('g-ECONED_3-Artboard_1');
-    var isDesktop = window.innerWidth >= 700;
+    var containerWidth = getContainerWidth();
+    var isDesktop = containerWidth >= 700;
 
-    // Manually switch artboards instead of relying on ai2html resizer
     if (isDesktop) {
       desktopBoard.style.display = 'block';
       mobileBoard.style.display = 'none';
@@ -276,18 +131,18 @@ body.ready {
 
     var box = document.getElementById('g-index-box');
     var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
-    var mobileBoard = document.getElementById('g-ECONED_3-Artboard_1');
-    var isDesktop = window.innerWidth >= 700;
+    var containerWidth = getContainerWidth();
+    var isDesktop = containerWidth >= 700;
     var reportHeight;
 
     if (isDesktop) {
-      var containerWidth = box.offsetWidth;
       var nativeWidth = 700;
       var nativeHeight = 229.27;
       var scale = Math.min(1, containerWidth / nativeWidth);
       desktopBoard.style.transform = 'scale(' + scale + ')';
       desktopBoard.style.transformOrigin = 'top left';
       var scaledHeight = nativeHeight * scale;
+      // Negative margin pulls content below up to fill gap left by scale
       desktopBoard.style.marginBottom = (scaledHeight - nativeHeight) + 'px';
       box.style.height = scaledHeight + 'px';
       reportHeight = scaledHeight;
@@ -299,6 +154,7 @@ body.ready {
 
     if (!reportHeight) return;
 
+    // Fade in now that sizing is correct
     document.body.classList.add('ready');
 
     var currentHeight = Math.round(reportHeight);
@@ -323,9 +179,10 @@ body.ready {
       retryCount++;
       if (retryCount >= 10) clearInterval(retryInterval);
     }, 300);
-  }, 100); // Reduced to 100ms since we no longer need to wait for external resizer
+  }, 100);
 
 })();
 </script>
+
   </body>
 </html>
