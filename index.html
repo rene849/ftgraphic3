@@ -235,36 +235,46 @@
 (function() {
   var lastHeight = 0;
   var stableCount = 0;
-  var sending = false;
 
-  function sendHeight() {
-    var currentHeight = document.body.scrollHeight;
+  function scaleAndSend() {
+    var box = document.getElementById('g-index-box');
+    var desktopBoard = document.getElementById('g-ECONED_3-Artboard_1_copy');
     
-    // If height hasn't changed, it's stable — no need to keep sending
-    if (currentHeight === lastHeight) {
-      stableCount++;
-      if (stableCount >= 3) return; // Stop after 3 stable readings
-    } else {
-      stableCount = 0; // Reset if height changed
-      lastHeight = currentHeight;
+    if (desktopBoard && desktopBoard.offsetParent !== null) {
+      // Desktop artboard is visible — scale it to fit
+      var containerWidth = box.offsetWidth;
+      var nativeWidth = 700;
+      var scale = Math.min(1, containerWidth / nativeWidth);
+      desktopBoard.style.transform = 'scale(' + scale + ')';
+      desktopBoard.style.transformOrigin = 'top left';
+      // Adjust container height to match scaled height
+      var scaledHeight = desktopBoard.offsetHeight * scale;
+      box.style.height = scaledHeight + 'px';
     }
 
+    var currentHeight = document.body.scrollHeight;
+    if (currentHeight === lastHeight) {
+      stableCount++;
+      if (stableCount >= 3) return;
+    } else {
+      stableCount = 0;
+      lastHeight = currentHeight;
+    }
     window.parent.postMessage({
       type: 'iframe-height',
       height: currentHeight
     }, '*');
   }
 
-  // Wait for content to settle then send
   setTimeout(function() {
-    sendHeight();
+    scaleAndSend();
     var retryCount = 0;
     var retryInterval = setInterval(function() {
-      sendHeight();
+      scaleAndSend();
       retryCount++;
       if (retryCount >= 10) clearInterval(retryInterval);
     }, 300);
-  }, 500);
+  }, 800);
 
 })();
 </script>
