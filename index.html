@@ -232,7 +232,24 @@
 
     <script src="https://cdn.economistdatateam.com/ai2html/ai2html-resizer-v7-econ.js"></script>
 
-
+    <script>
+      function sendHeight() {
+        window.parent.postMessage({
+          type: 'iframe-height',
+          height: document.body.scrollHeight
+        }, '*');
+      }
+      // Wait 800ms for ai2html resizer to finish switching layouts before measuring
+      setTimeout(function() {
+        sendHeight();
+        var retryCount = 0;
+        var retryInterval = setInterval(function() {
+          sendHeight();
+          retryCount++;
+          if (retryCount >= 6) clearInterval(retryInterval);
+        }, 500);
+      }, 800);
+    </script>
 
   </body>
 </html>
